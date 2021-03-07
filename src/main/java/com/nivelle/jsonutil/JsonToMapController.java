@@ -19,7 +19,7 @@ public class JsonToMapController {
     @Autowired
     JsonToMapService jsonToMapService;
 
-    @PostMapping(value = "/toHashMap", produces = "text/plain;;charset=utf-8")
+    @PostMapping(value = "/toHashMap", produces = "text/plain;charset=utf-8")
     public Object toMap(@RequestBody String jsonStr) {
         HashMap hashMap = jsonToMapService.toMap(jsonStr);
         StringBuilder stringBuilder = new StringBuilder("HashMap params = new HashMap();\n");
